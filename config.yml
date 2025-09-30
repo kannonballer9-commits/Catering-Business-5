@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "menu"
+    label: "Menu"
+    file: "content/menu.yml"
+    fields:
+      - { name: "items", label: "Menu Items", widget: "list", fields: [{ name: "name", label: "Name" }, { name: "description", label: "Description" }, { name: "price", label: "Price" }] }
+  - name: "testimonials"
+    label: "Testimonials"
+    file: "content/testimonials.yml"
+    fields:
+      - { name: "entries", label: "Entries", widget: "list", fields: [{ name: "author", label: "Author" }, { name: "quote", label: "Quote" }] }
+  - name: "site_settings"
+    label: "Site Settings"
+    file: "content/site_settings.yml"
+    fields:
+      - { name: "tagline", label: "Tagline", widget: "string" }
+      - { name: "contact_email", label: "Contact Email", widget: "string" }
